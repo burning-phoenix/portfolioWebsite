@@ -7,7 +7,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > window.innerHeight * 0.8);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -24,24 +24,23 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container">
-        <div className="nav-brand">
-          <h3>Himanshu Janmeda</h3>
+      <div className="header-inner">
+        <div className="nav-brand" onClick={() => scrollToSection('hero')}>
+          Himanshu Janmeda
         </div>
-        
+
         <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
-            <li><button onClick={() => scrollToSection('hero')}>Home</button></li>
-            <li><button onClick={() => scrollToSection('about')}>About</button></li>
-            <li><button onClick={() => scrollToSection('skills')}>Skills</button></li>
+            <li><button onClick={() => scrollToSection('research')}>Research</button></li>
             <li><button onClick={() => scrollToSection('projects')}>Projects</button></li>
             <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
           </ul>
         </nav>
 
-        <button 
-          className="mobile-menu-toggle"
+        <button
+          className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           <span></span>
           <span></span>

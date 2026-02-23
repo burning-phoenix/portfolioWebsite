@@ -1,0 +1,40 @@
+.research-entry {
+  margin-bottom: 2.5rem;
+}
+
+.research-entry:last-child {
+  margin-bottom: 0;
+}
+
+.research-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--matte-slate);
+  margin-bottom: 0.3rem;
+}
+
+.research-meta {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ash-gray);
+  margin-bottom: 0.8rem;
+}
+
+.research-details {
+  list-style: none;
+  padding: 0;
+}
+
+.research-details li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--matte-slate);
+}
+
+.research-details li::before {
+  content: '\2013';
+  position: absolute;
+  left: 0;
+  color: var(--ash-gray);
+}
