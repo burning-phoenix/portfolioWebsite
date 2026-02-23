@@ -1,18 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolioWebsite/static/css/main.27ce49c2.css",
-    "main.js": "/portfolioWebsite/static/js/main.76332586.js",
-    "static/media/WassGood.png": "/portfolioWebsite/static/media/WassGood.8a016f07ec7a3d9d6ecf.png",
-    "static/media/IQTrader.png": "/portfolioWebsite/static/media/IQTrader.b8cb5dee511e3b32fbee.png",
-    "static/media/SpeedReader.png": "/portfolioWebsite/static/media/SpeedReader.2cc551e6e15d7e0681e0.png",
-    "static/media/GoEmotions.png": "/portfolioWebsite/static/media/GoEmotions.9adf6a1311f6b593c9d9.png",
-    "static/media/profile.JPG": "/portfolioWebsite/static/media/profile.697808211e4d4887b48b.JPG",
+    "main.css": "/portfolioWebsite/static/css/main.d1349ab7.css",
+    "main.js": "/portfolioWebsite/static/js/main.12928922.js",
+    "static/media/noether-trailer.mp4": "/portfolioWebsite/static/media/noether-trailer.e352b91db7b876ca1a93.mp4",
     "index.html": "/portfolioWebsite/index.html",
-    "main.27ce49c2.css.map": "/portfolioWebsite/static/css/main.27ce49c2.css.map",
-    "main.76332586.js.map": "/portfolioWebsite/static/js/main.76332586.js.map"
+    "main.d1349ab7.css.map": "/portfolioWebsite/static/css/main.d1349ab7.css.map",
+    "main.12928922.js.map": "/portfolioWebsite/static/js/main.12928922.js.map"
   },
   "entrypoints": [
-    "static/css/main.27ce49c2.css",
-    "static/js/main.76332586.js"
+    "static/css/main.d1349ab7.css",
+    "static/js/main.12928922.js"
   ]
 }
