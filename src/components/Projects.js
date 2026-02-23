@@ -1,83 +1,80 @@
 import React from 'react';
 import './Projects.css';
-import iqTraderImg from '../assets/IQTrader.png';
-import goEmotionsImg from '../assets/GoEmotions.png';
-import speedReaderImg from '../assets/SpeedReader.png';
-import wassgoodImg from '../assets/WassGood.png';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'IQtrader',
-      description: 'Multi-resolution deep learning framework (CNN + BiLSTM + Attention) for 8-hour stock forecasting. Achieved 72% directional accuracy and won Best AI/ML Hack at GrizzHacks 2025.',
-      technologies: ['Python', 'TensorFlow', 'Pandas', 'NumPy'],
-      image: iqTraderImg,
-      liveLink: 'https://devpost.com/software/iqtrader',
-      githubLink: 'https://github.com/burning-phoenix/IQtrader'
+      title: 'Noether',
+      description: 'Terminal-based multi-agent AI code editor. Three-agent orchestration system (Planner/Coder/Explorer) with sandboxed execution, user approval workflows, and snapshot-based undo. Integrated local RAG for semantic codebase retrieval on 8GB M1 Macs.',
+      technologies: ['Python', 'Textual', 'Qdrant', 'LLM Orchestration'],
+      link: 'https://github.com/burning-phoenix/Noether',
+      date: 'Feb 2026'
     },
     {
-      title: 'GoEmotions Classifier',
-      description: 'Real-time, multi-label emotion detection using DistilBERT + CNN on Google\'s GoEmotions dataset. Outperformed baselines by +15% MCC with 40% fewer parameters.',
-      technologies: ['Python', 'HuggingFace', 'PyTorch', 'NLP'],
-      image: goEmotionsImg,
-      liveLink: 'https://github.com/burning-phoenix/GoEmotions/blob/main/Classifier.ipynb',
-      githubLink: 'https://github.com/burning-phoenix/GoEmotions'
+      title: 'IQtrader',
+      subtitle: 'Best AI/ML Hack — GrizzHacks 2025',
+      description: 'Multi-resolution deep learning model for 8-hour stock forecasting combining CNNs, BiLSTMs, and transformer-style attention. Achieved 72% directional accuracy, 55% correlation, and 0.2874 MSE.',
+      technologies: ['Python', 'TensorFlow', 'Deep Learning'],
+      link: 'https://github.com/burning-phoenix/IQtrader',
+      date: 'March 2025'
+    },
+    {
+      title: 'GoEmotions Multi-Label Classifier',
+      description: 'Fast multi-label emotion classifier using DistilBERT + CNN on Google\'s GoEmotions dataset (27 labels). Achieved 45.7% F1 and 56.7% MCC — outperforming BERT-base baselines by +15% MCC with 40% fewer parameters.',
+      technologies: ['Python', 'HuggingFace', 'NLP', 'PyTorch'],
+      link: 'https://github.com/burning-phoenix/GoEmotions/blob/main/Classifier.ipynb',
+      date: 'Feb 2025'
     },
     {
       title: 'Speed Reader',
-      description: 'Web app that summarises articles using NLTK and web scraping; recognised at InnoHacks 2021.',
-      technologies: ['Flask', 'NLTK', 'Bootstrap', 'Python'],
-      image: speedReaderImg,
-      liveLink: 'https://devpost.com/software/speed-reader-v9ihzr',
-      githubLink: 'https://devpost.com/software/speed-reader-v9ihzr'
+      subtitle: 'Categorical Prize at InnoHacks',
+      description: 'Web app that summarizes articles using NLTK and web scraping, with a Flask backend and Bootstrap frontend. Collaborated with a cross-functional team on the Python text processing pipeline.',
+      technologies: ['Python', 'Flask', 'NLTK', 'Bootstrap'],
+      link: 'https://devpost.com/software/speed-reader-v9ihzr',
+      date: 'March 2021'
     },
     {
       title: 'Wassgood',
-      description: 'React & Firebase application analysing product ingredients for safety using scraping + NLP; 1st prize at SyntHacks 2020.',
-      technologies: ['React', 'Firebase', 'NLP', 'JavaScript'],
-      image: wassgoodImg,
-      liveLink: 'https://devpost.com/software/scanlator',
-      githubLink: 'https://devpost.com/software/scanlator'
+      subtitle: 'SyntHacks 1st Prize',
+      description: 'App evaluating product safety via ingredient analysis using web scraping and NLP.',
+      technologies: ['React', 'NLP', 'Web Scraping'],
+      link: 'https://devpost.com/software/scanlator',
+      date: 'Nov 2020'
+    },
+    {
+      title: 'Environment Watch',
+      subtitle: 'Make SPP 2020 Hackathon',
+      description: 'Mobile platform that crowdsources data about populations of endangered animals. Users report wildlife sightings with photos and location, viewable on an interactive map with community-driven verification.',
+      technologies: ['Kotlin', 'Firebase', 'TensorFlow', 'Google Maps API'],
+      link: 'https://github.com/burning-phoenix/environment-watch',
+      date: '2020'
     }
   ];
 
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>Featured Projects</h2>
-        <p className="projects-intro">
-          Here are some of my recent projects that showcase my skills and experience
-        </p>
-        
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} className="project-img" />
-              </div>
-              
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="tech-badge">{tech}</span>
-                  ))}
-                </div>
-                
-                <div className="project-links">
-                  <a href={project.liveLink} className="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                  </a>
-                  <a href={project.githubLink} className="btn" target="_blank" rel="noopener noreferrer">
-                    View Code
-                  </a>
-                </div>
-              </div>
+        <h2 className="section-label">Projects</h2>
+
+        {projects.map((project, index) => (
+          <div key={index} className="project-entry">
+            <h3 className="project-title">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.title}
+              </a>
+              {project.subtitle && (
+                <span className="project-subtitle"> &mdash; {project.subtitle}</span>
+              )}
+              <span className="project-date">{project.date}</span>
+            </h3>
+            <p className="project-description">{project.description}</p>
+            <div className="project-tech">
+              {project.technologies.map((tech, i) => (
+                <span key={i} className="tech-tag">{tech}</span>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

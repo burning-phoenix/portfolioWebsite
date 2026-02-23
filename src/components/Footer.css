@@ -1,8 +1,13 @@
-/* Footer styles */
 .footer {
-  background: #0f172a;
-  color: #ffffff;
-  padding: 1rem 0;
+  background: var(--deep-nebula);
+  border-top: 1px solid rgba(149, 165, 166, 0.2);
+  padding: 1.5rem 0;
+}
+
+.footer p {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--ash-gray);
+  margin: 0;
   text-align: center;
-  font-size: 0.9rem;
 }

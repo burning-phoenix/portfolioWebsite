@@ -1,15 +1,29 @@
-/* Basic styling for Contact section */
-.contact {
-  padding: 4rem 0;
-  text-align: center;
+.contact-text {
+  color: var(--matte-slate);
+  margin-bottom: 0.75rem;
 }
-.contact .contact-links {
-  margin: 1.5rem 0;
+
+.contact-links {
+  margin-bottom: 0;
 }
-.contact .btn {
+
+.contact-links a {
+  color: var(--muted-rust);
+}
+
+.contact-separator {
   margin: 0 0.5rem;
+  color: var(--ash-gray);
 }
-.contact-phone {
-  margin-top: 1rem;
-  font-weight: 600;
+
+@media (max-width: 480px) {
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .contact-separator {
+    display: none;
+  }
 }
