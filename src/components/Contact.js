@@ -7,10 +7,10 @@ const Contact = () => {
       <div className="container">
         <h2 className="section-label">Contact</h2>
         <p className="contact-text">
-          Open to research collaborations, engineering roles, and interesting conversations.
+          Open to freelance engagements, research collaborations, engineering roles, and interesting conversations.
         </p>
         <p className="contact-links">
-          <a href="mailto:himanshujanmeda007@gmail.com">himanshujanmeda007@gmail.com</a>
+          <a href="mailto:janmedahs@gmail.com">janmedahs@gmail.com</a>
           <span className="contact-separator">&middot;</span>
           <a href="https://www.linkedin.com/in/himanshu-janmeda-45259929b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <span className="contact-separator">&middot;</span>

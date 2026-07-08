@@ -1,0 +1,106 @@
+.case-study-page {
+  padding: 80px 0 60px;
+}
+
+.cs-back {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.cs-header {
+  margin-bottom: 3.5rem;
+}
+
+.cs-header .section-label {
+  margin-bottom: 1.5rem;
+}
+
+.cs-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cs-subtitle {
+  font-size: 1.25rem;
+  color: var(--matte-slate);
+  margin-bottom: 1rem;
+}
+
+.cs-meta {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ash-gray);
+  margin-bottom: 0;
+}
+
+.cs-section {
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+.cs-heading {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ash-gray);
+  margin-bottom: 1.25rem;
+}
+
+.cs-section strong {
+  color: var(--matte-slate);
+}
+
+.cs-section code {
+  font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
+  font-size: 0.85em;
+  color: var(--matte-mint);
+}
+
+.cs-section ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.cs-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Reserved space for anime.js visual aids — kept invisible until they exist */
+.cs-visual {
+  margin: 2rem 0;
+}
+
+.cs-visual:empty {
+  display: none;
+}
+
+.cs-footer {
+  border-top: 1px solid rgba(149, 165, 166, 0.3);
+  padding-top: 2rem;
+}
+
+.cs-footer-back {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .case-study-page {
+    padding: 60px 0 48px;
+  }
+
+  .cs-title {
+    font-size: 1.6rem;
+  }
+
+  .cs-subtitle {
+    font-size: 1.1rem;
+  }
+}

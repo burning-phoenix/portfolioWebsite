@@ -1,0 +1,16 @@
+# dependencies
+/node_modules
+
+# production
+/build
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# personal references — not for publication
+/external_resources
+/animejs-skills-main
+/SOUL.md
