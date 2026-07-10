@@ -1,5 +1,78 @@
 .case-study-page {
   padding: 80px 0 60px;
+  min-height: 100vh;
+  /* default palette = the house theme; each study overrides with its own extension */
+  --cs-bg: #FAFAF8;
+  --cs-ink: var(--matte-slate);
+  --cs-text: var(--matte-slate);
+  --cs-muted: var(--ash-gray);
+  --cs-accent: var(--muted-rust);
+  --cs-accent-deep: #8A3E33;
+  --cs-wash: #F1F1ED;
+  background-color: var(--cs-bg);
+  color: var(--cs-text);
+  transition: background-color 320ms ease, color 320ms ease;
+}
+
+/* Per-study palettes: hints of the house moods, extended.
+   Noether = terminal (mint → pine), Corroborate = blueprint (slate → archival ink),
+   code-rag = deep space (cyan + nebula violet). Same matte value range as the house palette. */
+.cs-theme-noether {
+  --cs-ink: #22312A;
+  --cs-accent: #4E9A76;
+  --cs-accent-deep: #2E5E47;
+  --cs-wash: #EDF3EE;
+}
+
+.cs-theme-corroborate {
+  --cs-ink: #26313C;
+  --cs-accent: #3E6E9E;
+  --cs-accent-deep: #2A4C6E;
+  --cs-wash: #ECF1F6;
+}
+
+.cs-theme-code-rag {
+  --cs-ink: #2D283E;
+  --cs-accent: #4A9E9C;
+  --cs-accent-deep: #574E7E;
+  --cs-wash: #F0EFF4;
+}
+
+/* Tokyo midnight — the tech view's ground. A color-theory cousin of the house
+   palette: charcoal-void pulled toward deep-nebula's violet hue, dusty-bone
+   cooled toward periwinkle, accents brightened to hold contrast on dark. */
+.cs-dark {
+  --cs-bg: #1D1B27;
+  --cs-ink: #E6E4EF;
+  --cs-text: #C6C3D4;
+  --cs-muted: #837E96;
+  --cs-wash: #262433;
+}
+
+.cs-dark.cs-theme-noether {
+  --cs-accent: #5CB98E;
+  --cs-accent-deep: #8ED8B5;
+  --cs-wash: #212B25;
+}
+
+.cs-dark.cs-theme-corroborate {
+  --cs-accent: #6FA3D8;
+  --cs-accent-deep: #9DC4E8;
+  --cs-wash: #20293A;
+}
+
+.cs-dark.cs-theme-code-rag {
+  --cs-accent: #56BDBA;
+  --cs-accent-deep: #A99BE0;
+  --cs-wash: #262138;
+}
+
+.case-study-page a {
+  color: var(--cs-accent-deep);
+}
+
+.case-study-page .section-label {
+  color: var(--cs-muted);
 }
 
 .cs-back {
@@ -20,11 +93,12 @@
 .cs-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: var(--cs-ink);
 }
 
 .cs-subtitle {
   font-size: 1.25rem;
-  color: var(--matte-slate);
+  color: var(--cs-text);
   margin-bottom: 1rem;
 }
 
@@ -32,8 +106,46 @@
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--ash-gray);
+  color: var(--cs-muted);
   margin-bottom: 0;
+}
+
+/* The view toggle: a boxed button that fills with the destination theme's
+   ground color — bottom-up into midnight, top-down back into daylight. */
+.cs-view-toggle {
+  position: relative;
+  overflow: hidden;
+  font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--cs-accent-deep);
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--cs-accent-deep) 55%, transparent);
+  border-radius: 2px;
+  padding: 0.45rem 0.9rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.cs-view-toggle:hover {
+  border-color: var(--cs-accent-deep);
+}
+
+.cs-view-toggle-fill {
+  position: absolute;
+  inset: 0;
+  background: #1D1B27;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+}
+
+.cs-dark .cs-view-toggle-fill {
+  background: #FAFAF8;
+  transform-origin: top center;
+}
+
+.cs-view-toggle-label {
+  position: relative;
+  z-index: 1;
 }
 
 .cs-section {
@@ -47,18 +159,18 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--ash-gray);
+  color: var(--cs-accent-deep);
   margin-bottom: 1.25rem;
 }
 
 .cs-section strong {
-  color: var(--matte-slate);
+  color: var(--cs-ink);
 }
 
 .cs-section code {
   font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
   font-size: 0.85em;
-  color: var(--matte-mint);
+  color: var(--cs-accent);
 }
 
 .cs-section ul {
@@ -70,6 +182,53 @@
   margin-bottom: 0.5rem;
 }
 
+/* In-prose data tables */
+.cs-table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+
+.cs-table th,
+.cs-table td {
+  border: 1px solid color-mix(in srgb, var(--cs-muted) 35%, transparent);
+  padding: 0.4rem 1rem;
+  text-align: left;
+}
+
+.cs-table th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cs-muted);
+}
+
+.cs-table td:not(:first-child) {
+  font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
+  font-size: 0.8rem;
+}
+
+/* Canonical-literature name under a metric's own name */
+.cs-table-lit {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.7rem;
+  color: var(--cs-muted);
+}
+
+/* KaTeX inherits the page color. Size in rem so the formulas don't inherit
+   the table's shrunken mono size; stacked fractions get breathing room. */
+.cs-table .katex {
+  font-size: 1.45rem;
+}
+
+.cs-table td .katex {
+  padding: 0.3rem 0;
+  display: inline-block;
+}
+
 /* Reserved space for anime.js visual aids — kept invisible until they exist */
 .cs-visual {
   margin: 2rem 0;
@@ -79,8 +238,42 @@
   display: none;
 }
 
+/* Interim dark-mode readability for daylight visuals shown in the tech view:
+   free-standing SVG text lightens; text inside the light boxes/tokens keeps
+   its own fill. Visuals drawn midnight-native (.case-visual--night) opt out.
+   The full dark re-skin of the daylight visuals happens in the animation pass. */
+.cs-dark .case-visual:not(.case-visual--night) svg > text:not(#np-approved) {
+  fill: var(--cs-text);
+}
+
+/* Animation placeholder — visible during review, replaced by the real visual later */
+.cs-anim-slot {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--cs-wash);
+  border-left: 2px solid var(--cs-accent);
+}
+
+.cs-anim-slot-name {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cs-accent-deep);
+  margin-bottom: 0.4rem;
+}
+
+.cs-anim-slot-why {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--cs-text);
+  margin: 0;
+}
+
 .cs-footer {
-  border-top: 1px solid rgba(149, 165, 166, 0.3);
+  border-top: 1px solid color-mix(in srgb, var(--cs-muted) 35%, transparent);
   padding-top: 2rem;
 }
 
