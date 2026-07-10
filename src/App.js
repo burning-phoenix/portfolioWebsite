@@ -10,8 +10,6 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NoetherCaseStudy from './pages/NoetherCaseStudy';
-import CorroborateCaseStudy from './pages/CorroborateCaseStudy';
-import CodeRagCaseStudy from './pages/CodeRagCaseStudy';
 
 const Home = () => (
   <>
@@ -33,8 +31,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/case-studies/noether" element={<NoetherCaseStudy />} />
-          <Route path="/case-studies/corroborate" element={<CorroborateCaseStudy />} />
-          <Route path="/case-studies/code-rag" element={<CodeRagCaseStudy />} />
         </Routes>
       </div>
     </HashRouter>

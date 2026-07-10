@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import CaseStudyLayout, { CsSection } from './CaseStudyLayout';
 import NoetherPipeline from '../visuals/NoetherPipeline';
 import GameOver from '../visuals/GameOver';
@@ -303,7 +302,7 @@ const TechView = () => (
       <p>
         The honest weak point is retrieval. Noether embeds only the first 4,000 characters of each
         file, no structural chunking, exactly the limitation that became my follow-up
-        project, <Link to="/case-studies/code-rag">code-rag</Link>, where I built AST-aware
+        project, <a href="https://github.com/burning-phoenix/code-rag" target="_blank" rel="noopener noreferrer">code-rag</a>, where I built AST-aware
         chunking and measured whether it works. And undo has a limitation, it restores files, not the world, a bash
         command's side effects, a package installed or a migration run, aren't
         snapshot-restorable, which is exactly why commands face the approval modal instead.

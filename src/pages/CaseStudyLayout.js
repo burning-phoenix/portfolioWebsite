@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { animate, utils } from 'animejs';
-import katex from 'katex';
-import 'katex/dist/katex.min.css';
 import './CaseStudy.css';
 
 export const CsSection = ({ label, children }) => (
@@ -10,16 +8,6 @@ export const CsSection = ({ label, children }) => (
     <h2 className="cs-heading">{label}</h2>
     {children}
   </section>
-);
-
-/* Inline math, KaTeX-rendered. Inherits the page color, so it follows both
-   the daylight and midnight palettes. */
-export const TeX = ({ children }) => (
-  <span
-    dangerouslySetInnerHTML={{
-      __html: katex.renderToString(children, { throwOnError: false }),
-    }}
-  />
 );
 
 /* Visible placeholder for a planned animation: names the visual and states

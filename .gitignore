@@ -14,3 +14,9 @@ yarn-error.log*
 /external_resources
 /animejs-skills-main
 /SOUL.md
+
+# case studies still in progress — local drafts, published when ready
+/src/pages/CorroborateCaseStudy.js
+/src/pages/CodeRagCaseStudy.js
+/src/visuals/Dissection.js
+/src/visuals/EmbeddingSpace.js

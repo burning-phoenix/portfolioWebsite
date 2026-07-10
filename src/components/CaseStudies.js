@@ -9,18 +9,6 @@ const CaseStudies = () => {
       title: 'Noether',
       tagline: 'A multi-agent code editor built on the assumption that the LLM will misbehave.',
       repo: 'https://github.com/burning-phoenix/noether'
-    },
-    {
-      slug: 'corroborate',
-      title: 'Corroborate',
-      tagline: 'A news pipeline where facts are verified by math, not by the model.',
-      repo: null
-    },
-    {
-      slug: 'code-rag',
-      title: 'code-rag',
-      tagline: 'Retrieval for coding agents that I can prove works.',
-      repo: 'https://github.com/burning-phoenix/code-rag'
     }
   ];
 
@@ -29,7 +17,7 @@ const CaseStudies = () => {
       <div className="container">
         <h2 className="section-label">Case Studies</h2>
         <p className="case-studies-intro">
-          I take on freelance engineering work. These three case studies show how I
+          I take on freelance engineering work. This case study shows how I
           approach it &mdash; the problem, the constraints, the decisions that mattered,
           and the evidence that it works.
         </p>
