@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       title: 'GoEmotions Multi-Label Classifier',
-      description: 'Fast multi-label emotion classifier using DistilBERT + CNN on Google\'s GoEmotions dataset (27 labels). Achieved 45.7% F1 and 56.7% MCC — outperforming BERT-base baselines by +15% MCC with 40% fewer parameters.',
+      description: 'Fast multi-label emotion classifier using DistilBERT + CNN on Google\'s GoEmotions dataset (27 labels). Achieved 45.7% F1 and 56.7% MCC. Outperforming BERT-base baselines by +15% MCC with 40% fewer parameters.',
       technologies: ['Python', 'HuggingFace', 'NLP', 'PyTorch'],
       link: 'https://github.com/burning-phoenix/GoEmotions/blob/main/Classifier.ipynb',
       date: 'Feb 2025'
@@ -54,7 +54,7 @@ const Projects = () => {
     {
       title: 'DocDer',
       subtitle: 'Best General Hack at HackCancerSolutions',
-      description: 'Flutter app using TensorFlow for mole malignancy detection through image analysis. Individually developed — learned Flutter and built the app from scratch, combining mobile development with machine learning integration.',
+      description: 'Flutter app using TensorFlow for mole malignancy detection through image analysis. Individually developed. Learned Flutter and built the app from scratch, combining mobile development with machine learning integration.',
       technologies: ['Flutter', 'TensorFlow', 'Machine Learning'],
       link: 'https://devpost.com/software/docder',
       date: 'Oct 2020'
