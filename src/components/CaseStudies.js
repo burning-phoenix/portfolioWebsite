@@ -7,7 +7,7 @@ const CaseStudies = () => {
     {
       slug: 'noether',
       title: 'Noether',
-      tagline: 'A multi-agent code editor built on the assumption that the LLM will misbehave.',
+      tagline: 'A multi-agent coding-oriented harness with enforceable checks on LLMs',
       repo: 'https://github.com/burning-phoenix/noether'
     }
   ];
@@ -17,9 +17,8 @@ const CaseStudies = () => {
       <div className="container">
         <h2 className="section-label">Case Studies</h2>
         <p className="case-studies-intro">
-          I take on freelance engineering work. This case study shows how I
-          approach it &mdash; the problem, the constraints, the decisions that mattered,
-          and the evidence that it works.
+          I take on freelance engineering work. Below is a case study to show how I
+          approach a problem.
         </p>
 
         {studies.map((study) => (

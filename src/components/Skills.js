@@ -5,19 +5,19 @@ const Skills = () => {
   const categories = [
     {
       name: 'Languages',
-      items: 'Python, C++, JavaScript, HTML, CSS'
+      items: 'Python, C++, SQL, TypeScript, Go, Java'
     },
     {
-      name: 'Frameworks & Tools',
-      items: 'Git, Django, MySQL, PyTest'
+      name: 'LLM systems',
+      items: 'LLM loops (Plan-and-Execute), vLLM, RAG, JAX, MCP, evaluation, LangGraph, multi-agent orchestration and observability, vector databases, prompt engineering'
     },
     {
-      name: 'AI/ML',
-      items: 'TensorFlow, Sparse Autoencoders, Interpretability Methods, Transformers, RL, Deep Learning'
+      name: 'ML',
+      items: 'PyTorch, deep learning, mechanistic interpretability, CUDA, SAEs, QLoRA'
     },
     {
-      name: 'Cloud',
-      items: 'AWS (S3, EC2, Lambda), Docker'
+      name: 'Infra/Web',
+      items: 'AWS, Azure, Docker, Make, CAN, CI/CD, Git'
     }
   ];
 

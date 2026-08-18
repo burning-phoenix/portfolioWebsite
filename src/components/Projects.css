@@ -1,3 +1,8 @@
+.projects-intro {
+  color: var(--matte-slate);
+  margin-bottom: 2.5rem;
+}
+
 .project-entry {
   margin-bottom: 2.5rem;
 }
@@ -40,6 +45,25 @@
 .project-description {
   color: var(--matte-slate);
   margin-bottom: 0.5rem;
+}
+
+.project-disclaimer {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ash-gray);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.project-case-study {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.project-case-study a {
+  color: var(--muted-rust);
 }
 
 .project-tech {

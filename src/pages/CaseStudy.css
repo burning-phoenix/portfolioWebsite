@@ -12,6 +12,24 @@
   background-color: var(--cs-bg);
   color: var(--cs-text);
   transition: background-color 320ms ease, color 320ms ease;
+  /* Prose follows the view: daylight reads as an essay (Newsreader),
+     midnight reads technical (Spectral). Inter keeps the wayfinding
+     roles (labels, back link, captions); the mono keeps code and the
+     toggle. Newsreader's text optical size runs small, so it sits a
+     step above Spectral. */
+  --cs-font-body: 'Newsreader', Georgia, serif;
+  font-family: var(--cs-font-body);
+  font-size: 1.15rem;
+}
+
+.cs-dark {
+  --cs-font-body: 'Spectral', Georgia, serif;
+  font-size: 1.05rem;
+}
+
+/* Title follows the view font; .cs-heading section labels stay Inter */
+.case-study-page .cs-title {
+  font-family: inherit;
 }
 
 /* Per-study palettes: hints of the house moods, extended.
@@ -65,6 +83,11 @@
   --cs-accent: #56BDBA;
   --cs-accent-deep: #A99BE0;
   --cs-wash: #262138;
+}
+
+/* Case studies get a wider measure than the 720px house container */
+.case-study-page .container {
+  max-width: 860px;
 }
 
 .case-study-page a {

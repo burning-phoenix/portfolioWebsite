@@ -38,3 +38,16 @@
   left: 0;
   color: var(--ash-gray);
 }
+
+.research-links {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+.research-separator {
+  color: var(--ash-gray);
+  margin: 0 0.6rem;
+}

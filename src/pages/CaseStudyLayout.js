@@ -33,6 +33,17 @@ const ViewToggle = ({ view, onToggleView }) => {
 
   const destLabelColor = view === 'plain' ? '#E6E4EF' : '#2C3E50';
 
+  // Cancel in-flight animations on unmount so their onCompletes never
+  // fire against nulled refs (e.g. navigating away mid-sweep).
+  useEffect(() => {
+    const btn = btnRef.current;
+    const fill = fillRef.current;
+    return () => {
+      utils.remove(btn);
+      utils.remove(fill);
+    };
+  }, []);
+
   const handleEnter = () => {
     if (busyRef.current || settledRef.current) return;
     restColorRef.current = getComputedStyle(btnRef.current).color;
@@ -49,7 +60,7 @@ const ViewToggle = ({ view, onToggleView }) => {
         color: restColorRef.current,
         duration: 260,
         ease: 'inOutQuad',
-        onComplete: () => { btnRef.current.style.color = ''; }
+        onComplete: () => { if (btnRef.current) btnRef.current.style.color = ''; }
       });
     }
   };
@@ -66,6 +77,7 @@ const ViewToggle = ({ view, onToggleView }) => {
       duration: Math.max(120, 400 * (1 - progress)),
       ease: 'inOutQuart',
       onComplete: () => {
+        if (!btnRef.current || !fillRef.current) return;
         onToggleView();
         btnRef.current.style.color = '';
         settledRef.current = true;
@@ -75,6 +87,7 @@ const ViewToggle = ({ view, onToggleView }) => {
           delay: 80,
           ease: 'outQuad',
           onComplete: () => {
+            if (!fillRef.current) return;
             utils.set(fillRef.current, { scaleY: 0, opacity: 1 });
             busyRef.current = false;
           }

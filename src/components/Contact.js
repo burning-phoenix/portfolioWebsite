@@ -15,8 +15,6 @@ const Contact = () => {
           <a href="https://www.linkedin.com/in/himanshu-janmeda-45259929b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <span className="contact-separator">&middot;</span>
           <a href="https://github.com/burning-phoenix/" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <span className="contact-separator">&middot;</span>
-          <a href="https://substack.com/@monkeyspaw" target="_blank" rel="noopener noreferrer">Substack</a>
         </p>
       </div>
     </section>
